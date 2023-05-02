@@ -3,20 +3,14 @@ import { Inter } from 'next/font/google'
 import Logo from './components/Logo'
 import Navbar from './components/Navbar'
 import AuthButtons from './components/AuthButtons'
+import Category from './components/Category'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main className="flex max-h-[100vh] flex-col items-center justify-between p-2">
-      <div className=" w-full bg-fixed bg-cover rounded-md h-[98vh] box-border"
-        style={
-          {
-            background: "url('/landing-image.jpeg'), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)",
-            backdropFilter: "blur(3.5px)"
-          }
-        }
-      >
+      <div className="bg-[url('/landing-image.jpeg')] w-full bg-fixed bg-cover rounded-md h-[98vh] box-border">
         <div className="mx-auto flex flex-row items-center justify-around py-5">
           <Logo />
           <Navbar />
@@ -28,7 +22,8 @@ export default function Home() {
           <div className="font-semibold text-2xl">Special offers to suite your plan</div>
         </div>
       </div>
-      Hello
+      <Category />
     </main>
+    
   )
 }
