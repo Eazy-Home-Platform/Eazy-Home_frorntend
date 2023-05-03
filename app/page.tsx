@@ -4,6 +4,7 @@ import Logo from './components/Logo'
 import Navbar from './components/Navbar'
 import AuthButtons from './components/AuthButtons'
 import Category from './components/Category'
+import Listings from './components/Listings'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function Home() {
       </div>
       </div>
       <Category />
+      <Listings />
     </main>
     
   )

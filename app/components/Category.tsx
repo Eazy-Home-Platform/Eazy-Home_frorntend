@@ -6,7 +6,7 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 const Category = () => {
     return (
-        <div className="pt-4 flex flex-row ml-20 overflow-x-hidden text-black">
+        <div className="pt-4 flex flex-row ml-20 overflow-x-hidden text-black mb-10">
             <div className="flex flex-row items-center  justify-center gap-3 p-3 border-b-2 hover:text-neutral-900 text-neutral-700 transition cursor-pointer">
               <AiTwotoneHome size={32} />
               <div className="font-medium text-md">
