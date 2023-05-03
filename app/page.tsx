@@ -9,8 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex max-h-[100vh] flex-col items-center justify-between p-2">
+    <main className="flex min-h-[100vh] flex-col  justify-between p-2">
       <div className="bg-[url('/landing-image.jpeg')] w-full bg-fixed bg-cover rounded-md h-[98vh] box-border">
+      <div className="container-gradient">
         <div className="mx-auto flex flex-row items-center justify-around py-5">
           <Logo />
           <Navbar />
@@ -21,6 +22,7 @@ export default function Home() {
           <div className="font-bold text-6xl">LIVE & TRAVEL</div>
           <div className="font-semibold text-2xl">Special offers to suite your plan</div>
         </div>
+      </div>
       </div>
       <Category />
     </main>
