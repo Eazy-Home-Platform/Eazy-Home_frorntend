@@ -4,6 +4,7 @@ import CategoryBox from "./CategoryBox";
 import { BiFilter, BiHomeCircle } from "react-icons/bi";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
+
 const Category = () => {
     return (
         <div className="pt-4 flex flex-row ml-20 overflow-x-hidden text-black mb-10">

@@ -1,11 +1,69 @@
 import Image from "next/image"
 import { AiOutlineHeart } from "react-icons/ai"
-
+const listingOptions = [
+    {
+        id: "1",
+        region: "Nyamirambo, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home1.jpeg",
+        price: "400",
+    },
+    {
+        id: "2",
+        region: "Kicukiro, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home2.jpeg",
+        price: "400",
+    },
+    {
+        id: "3",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home3.jpeg",
+        price: "400",
+    },
+    {
+        id: "4",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home4.jpeg",
+        price: "400",
+    },
+    {
+        id: "5",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home5.jpeg",
+        price: "400",
+    },
+    {
+        id: "6",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home6.jpeg",
+        price: "400",
+    },
+  
+]
 const Listings = () => {
     return (
         <>
-        <div className="text-black pt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
-            <div className="col-span-1 cursor-pointer group">
+
+            <div className="text-black pt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-20">
+        {listingOptions.map((listing) => (
+            <div className="col-span-2 cursor-pointer group">
                 <div className="flex flex-col gap-2 w-full">
                     <div className="aspect-square w-full relative overflow-hidden rounded-xl">
                         <Image
@@ -13,11 +71,11 @@ const Listings = () => {
                             className="
                             object-cover 
                             h-full 
-                            w-full 
+                            w-full
                             group-hover:scale-110 
                             transition
                             "
-                            src="/landing-image.jpeg"
+                            src={listing.imageSrc}
                             alt="Listing"
                         />
                         <div className="absolute top-3 right-3">
@@ -35,20 +93,22 @@ const Listings = () => {
                         </div>
                     </div>
                     <div className="font-semibold text-lg">
-                        Nyamirambo, Rwanda
+                        {listing.region}
                     </div>
                     <div className="font-light text-neutral-500">
-                        6 nights - Jun 4-10
+                        {listing.nights} - {listing.date}
                     </div>
                     <div className="flex flex-row items-center gap-1">
                         <div className="font-semibold">
-                            $200
+                            ${listing.price}
                         </div>
-                        <div className="font-light">night</div>
+                        <div className="font-light">/ night</div>
                     </div>
                 </div>
             </div>
+        ))}
         </div>
+        
         </>
     )
 }
