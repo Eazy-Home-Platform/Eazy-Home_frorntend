@@ -88,9 +88,9 @@ const Listings = () => {
     return (
         <>
 
-            <div className="text-black pt-24 px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-20">
+            <div className="text-black pt-24 px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-20">
         {listingOptions.map((listing) => (                  
-            <div key={listing.id} className="col-span-2 cursor-pointer group">
+            <div key={listing.id} className="col-span-1 cursor-pointer group">
                 <div className="flex flex-col gap-2 w-full">
                     <div className="aspect-square w-full relative overflow-hidden rounded-xl">
                         <Image
