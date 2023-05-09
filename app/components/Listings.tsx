@@ -55,15 +55,42 @@ const listingOptions = [
         imageSrc: "/home6.jpeg",
         price: "400",
     },
+    {
+        id: "7",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home7.jpeg",
+        price: "400",
+    },
+    {
+        id: "8",
+        region: "Nyabihu, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/home8.jpeg",
+        price: "400",
+    },
+    {
+        id: "9",
+        region: "Kicukiro, Rwanda",
+        view: "Viewed 34,356 times last week",
+        nights: "6 nights",
+        date: "Jun 4-10",
+        imageSrc: "/homr9.jpeg",
+        price: "400",
+    },
   
 ]
 const Listings = () => {
     return (
         <>
 
-            <div className="text-black pt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-20">
-        {listingOptions.map((listing) => (
-            <div className="col-span-2 cursor-pointer group">
+            <div className="text-black pt-24 px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-20">
+        {listingOptions.map((listing) => (                  
+            <div key={listing.id} className="col-span-2 cursor-pointer group">
                 <div className="flex flex-col gap-2 w-full">
                     <div className="aspect-square w-full relative overflow-hidden rounded-xl">
                         <Image
@@ -95,14 +122,17 @@ const Listings = () => {
                     <div className="font-semibold text-lg">
                         {listing.region}
                     </div>
-                    <div className="font-light text-neutral-500">
+                    <div className="font-light text-neutral-900">
+                        {listing.view}
+                    </div>
+                    <div className="font-light text-neutral-900">
                         {listing.nights} - {listing.date}
                     </div>
                     <div className="flex flex-row items-center gap-1">
-                        <div className="font-semibold">
+                        <div className="font-bold text-3xl">
                             ${listing.price}
                         </div>
-                        <div className="font-light">/ night</div>
+                        <div className="font-semibold">/ night</div>
                     </div>
                 </div>
             </div>
