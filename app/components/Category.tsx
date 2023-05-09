@@ -7,7 +7,7 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 const Category = () => {
     return (
-        <div className="pt-4 flex flex-row ml-20 overflow-x-hidden text-black mb-10">
+        <div className="pt-4 flex flex-row ml-5 overflow-x-hidden text-black mb-10">
             <div className="flex flex-row items-center  justify-center gap-3 p-3 border-b-2 hover:text-neutral-900 text-neutral-700 transition cursor-pointer">
               <AiTwotoneHome size={32} />
               <div className="font-medium text-md">
@@ -59,8 +59,9 @@ const Category = () => {
             <div className="flex flex-row items-center  justify-center p-3">
               <IoArrowForwardCircleOutline size={36}  /> 
             </div>
-            <div className="flex flex-row items-center justify-around rounded-lg bg-white w-[130px]">
-              <BiFilter size={24} /> Filter
+            <div className="flex flex-row items-center justify-around rounded-lg bg-white w-[100px]">
+              <BiFilter size={24} /> 
+              <div className="font-medium text-md">Filter</div>
             </div>
         </div>
     )
