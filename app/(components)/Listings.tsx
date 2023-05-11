@@ -72,17 +72,7 @@ const listingOptions = [
         date: "Jun 4-10",
         imageSrc: "/home8.jpeg",
         price: "400",
-    },
-    {
-        id: "9",
-        region: "Kicukiro, Rwanda",
-        view: "Viewed 34,356 times last week",
-        nights: "6 nights",
-        date: "Jun 4-10",
-        imageSrc: "/homr9.jpeg",
-        price: "400",
-    },
-  
+    }
 ]
 const Listings = () => {
     return (
@@ -129,7 +119,7 @@ const Listings = () => {
                         {listing.nights} - {listing.date}
                     </div>
                     <div className="flex flex-row items-center gap-1">
-                        <div className="font-bold text-3xl">
+                        <div className="font-semibold text-xl">
                             ${listing.price}
                         </div>
                         <div className="font-semibold">/ night</div>
