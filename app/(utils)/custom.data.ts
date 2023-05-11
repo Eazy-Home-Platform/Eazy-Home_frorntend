@@ -30,7 +30,8 @@ interface IUser {
     email: string;
     password: string;
     phone_number: number;
-    dob: Date
+    dob: string;
+    [key: string]: any;
 }
 
 export const IUserImpl: IUser = {
@@ -38,5 +39,5 @@ export const IUserImpl: IUser = {
     email: 'cedrickmanzii0@gmail.com',
     password: 'manzi2005k',
     phone_number: 780918379,
-    dob: new Date(12, 2, 2004)
+    dob:'12/05/2004'
 }
