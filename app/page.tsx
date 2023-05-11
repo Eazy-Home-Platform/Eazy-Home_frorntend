@@ -9,7 +9,7 @@ import Footer from './(components)/Footer'
 
 export default function Home() {
   return (
-    <main className="flex min-h-[100vh] flex-col  justify-between">
+    <main className="flex min-h-[100vh] flex-col bg-white justify-between">
       <div className="p-2">
         <div className="bg-[url('/landing-image.jpeg')] w-full bg-fixed bg-cover rounded-md h-[98vh] box-border">
           <div className="container-gradient">
