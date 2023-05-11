@@ -1,19 +1,20 @@
 import { AiFillHome, AiFillInfoCircle } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import Link from "next/link";
 const Navbar = () => {
     return (
         <div className="flex flex-row items-center justify-center gap-20">
             <div className="flex flex-row gap-2">
                 <AiFillHome size={24} color="white" />
-                <div className="font-bold">Home</div>
+                <Link href="/" className="font-bold">Home </Link>
             </div>
             <div className="flex flex-row gap-2">
                 <AiFillInfoCircle size={24} color="white" />
-                <div className="font-bold">About Us</div>
+                <Link href="about" className="font-bold">About Us</Link>
             </div>
             <div className="flex flex-row gap-2">
                 <BsFillTelephoneFill size={24} color="white" />
-                <div className="font-bold">Contact Us</div>
+                <Link href="contact" className="font-bold">Contact Us</Link>
             </div>
         </div>
     )
