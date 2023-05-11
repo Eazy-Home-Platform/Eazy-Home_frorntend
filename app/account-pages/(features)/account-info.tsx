@@ -5,10 +5,11 @@ import AccountInfoData from './account-info-data'
 
 const AccountInfo = () => {
     const displayInfo = () => {
-        for (let index in IUserImpl) {
-            return <AccountInfoData value={index}/>
-        }
+        const keys = Object.keys(IUserImpl);
+        const infoData = keys.map((key) => <AccountInfoData key={key} label={key} value={IUserImpl[key]} />);
+        return infoData;
     }
+
     return (
         <div className='bg-white text-black w-full'>
             <div className='flex justify-between place-items-center py-4'>
