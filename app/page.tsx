@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Logo from './components/Logo'
-import Navbar from './components/Navbar'
-import AuthButtons from './components/AuthButtons'
-import Category from './components/Category'
-import Listings from './components/Listings'
-
-const inter = Inter({ subsets: ['latin'] })
+import Logo from './(components)/Logo'
+import Navbar from './(components)/Navbar'
+import AuthButtons from './(components)/AuthButtons'
+import Category from './(components)/Category'
+import Listings from './(components)/Listings'
 
 export default function Home() {
   return (
