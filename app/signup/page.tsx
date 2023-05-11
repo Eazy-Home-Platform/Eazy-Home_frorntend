@@ -4,4 +4,4 @@ const Signup = () => {
         <div className="text-black">Sign up</div>
     )
 }
-export default Signup
+export default Signup 

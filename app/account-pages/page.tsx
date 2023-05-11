@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Header from '../(components)/header'
+import Header from '../(components)/header';
 import pic from '../(assets)/model.jpeg'
 import Image from 'next/image'
 import { FaCloudUploadAlt, FaPencilAlt } from 'react-icons/fa'
