@@ -1,11 +1,11 @@
 import React from 'react'
 import { FaEdit } from 'react-icons/fa'
 
-const AccountInfoData = ({ value }: { value: string | number}) => {
+const AccountInfoData = ({ value ,label}: { label: any,value: any}) => {
     return (
         <div className='flex justify-between place-items-center'>
             <div>
-                <label className='text-[12px] text-slate-500'>{value}</label>
+                <label className='text-[12px] text-slate-500'>{label}</label>
                 <h1 className='text-black font-semibold text-[18px]'>{value}</h1>
             </div>
             <div>
