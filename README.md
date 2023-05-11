@@ -1,37 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Eazy Home - Frontend Readme
+
+Welcome to the Eazy Home frontend repository! In this readme, we will provide an extensive description of the frontend side of the Eazy Home application, which is a web-based platform that allows users to rent out their homes or find accommodations for their travels. Our frontend is built using ReactJS, a popular JavaScript library for building user interfaces.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the Eazy Home frontend, you will need to have Node.js installed on your machine. You can download and install Node.js from the official website: https://nodejs.org/en/. Once Node.js is installed, clone this repository to your local machine and run the following commands:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+cd eazy-home-frontend
+npm install
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+These commands will install all the required dependencies and start a development server on your local machine.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+The Eazy Home frontend is organized using the following directory structure:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+|-- src/
+    |-- components/
+        |-- common/
+        |-- features/
+    |-- pages/
+    |-- redux/
+    |-- services/
+    |-- styles/
+```
 
-## Learn More
+- The `src/components` directory contains reusable UI components that are used throughout the application. It is further divided into `common` and `features` directories. The `common` directory contains generic components such as `Button` and `Input`, while the `features` directory contains feature-specific components such as `ListingCard` and `ReservationForm`.
 
-To learn more about Next.js, take a look at the following resources:
+- The `src/pages` directory contains the top-level pages of the application such as `HomePage`, `ListingPage`, and `ReservationPage`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The `src/redux` directory contains the Redux store configuration, actions, and reducers.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- The `src/services` directory contains the API services that communicate with the backend.
 
-## Deploy on Vercel
+- The `src/styles` directory contains global styles that are applied throughout the application using the `styled-components` library.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Eazy-Home_frontend 
+The Eazy Home frontend includes the following features:
+
+- **Authentication**: Users can sign up, log in, and log out of the application using their email and password.
+
+- **Search**: Users can search for listings based on location, check-in and check-out dates, and number of guests.
+
+- **Listings**: Users can view detailed information about each listing, including photos, amenities, and reviews.
+
+- **Reservations**: Users can make reservations for listings by selecting the check-in and check-out dates and the number of guests.
+
+- **User Profile**: Users can view and edit their personal information, including their name, email, and profile picture.
+
+## Technologies Used
+
+The Eazy Home frontend is built using the following technologies:
+
+- **ReactJS**: A popular JavaScript library for building user interfaces.
+
+- **Redux**: A predictable state container for JavaScript applications.
+
+- **React Router**: A library for declaratively routing in React applications.
+
+- **Axios**: A library for making HTTP requests.
+
+- **Styled Components**: A library for styling React components.
+
+## Contributing
+
+We welcome contributions to the Eazy Home frontend! To get started, please fork this repository and create a new branch for your changes. Once you have made your changes, submit a pull request and we will review it as soon as possible.
+
+## License
+
+The Eazy Home frontend is licensed under the MIT License. See the `LICENSE` file for more information.
