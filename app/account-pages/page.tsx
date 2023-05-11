@@ -1,10 +1,12 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../(components)/header'
 import pic from '../(assets)/model.jpeg'
 import Image from 'next/image'
 import { FaCloudUploadAlt, FaPencilAlt } from 'react-icons/fa'
+import AccountInfo from './(features)/account-info'
 const Profile = () => {
+  const [showModalInfo, setShowModal] = useState<boolean>(false)
   return (
     <div className='bg-white text-black min-h-screen'>
       <Header />
@@ -25,23 +27,26 @@ const Profile = () => {
           </div>
           <div>
             <button className='bg-btn_color absolute hover:bg-green-400 group duration-500 right-10 top-10 text-black py-4 flex justify-center gap-6 place-items-center rounded-md shadow-sm px-4'>
-              <FaCloudUploadAlt/>
+              <FaCloudUploadAlt />
               <span className='text-[12px] group-hover:font-bold'>Upload new cover</span>
             </button>
           </div>
         </div>
         <div className='bg-white shadow-md rounded-md w-full '>
           <div className='bg-white shadow-md shadow-slate-100 w-full y-4 flex justify-between'>
-            <div className='border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'>
+            <div className={`border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200`} onClick={() => setShowModal(true)}>
               <h1 className='text-[14px]'>Account</h1>
             </div>
-            <div className='border-b-4 my-0 flex justify-center place-items-center flex-col py-2 w-full px-4 border-green-400'>
+            <div className={`border-b-4 my-0 flex justify-center place-items-center flex-col py-2 w-full px-4 border-green-400`}>
               <h1 className='text-[14px]'>Tickets/Bookings</h1>
             </div>
-            <div className='border-l-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'>
+            <div className={`border-l-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200`}>
               <h1 className='text-[14px]'>Payment methods</h1>
             </div>
           </div>
+          {showModalInfo &&
+            <AccountInfo />
+          }
         </div>
       </main>
     </div>
