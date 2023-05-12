@@ -11,7 +11,7 @@ const Form = () => {
         <div className="flex pt-5 justify-center items-center w-full gap-3">
           <div className="flex  flex-col justify-center w-full">
             <label className="text-[#79747E]">First Name</label>
-            <input
+            <inputw
               type="text"
               className="border-[1px] p-2 border-solid border-[#79747E] rounded-sm bg-transparent"
               placeholder=""
