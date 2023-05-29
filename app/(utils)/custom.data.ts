@@ -64,7 +64,7 @@ export interface ITicket {
 
 export const TicketsArr: ITicket[] = [
 {
-    id: randomUUID(),
+    id: '#12',
     flight_company: '',
     departure: 'New-york',
     arrival: 'China-downtown',
@@ -77,7 +77,7 @@ export const TicketsArr: ITicket[] = [
     status: TicketStatus.ACTIVE
 },
 {
-    id: randomUUID(),
+    id: '#12',
     departure: 'Seattle',
     flight_company: '',
     arrival: 'New-York',
@@ -90,7 +90,7 @@ export const TicketsArr: ITicket[] = [
     status: TicketStatus.ACTIVE
 },
 {
-    id: randomUUID(),
+    id: '#12',
     departure: 'MACAU',
     flight_company: '',
     arrival: 'BEIJING',
