@@ -11,11 +11,11 @@ const AccountInfo = () => {
     }
 
     return (
-        <div className='bg-white text-black w-full'>
-            <div className='flex justify-between place-items-center py-4'>
-                <h1 className='text-xl font-semibold'>Account</h1>
+        <div className='text-black w-full'>
+            <div className='flex justify-between py-8 place-items-center px-10'>
+                <h1 className='text-xl font-medium'>Profile</h1>
             </div>
-            <div className='bg-white rounded-sm shadow-sm shadow-slate-100'>
+            <div className='bg-white px-10 rounded-sm shadow-md py-4 shadow-slate-200'>
                 {displayInfo()}
             </div>
         </div>
