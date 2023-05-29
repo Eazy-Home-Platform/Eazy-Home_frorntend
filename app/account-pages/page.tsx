@@ -38,7 +38,7 @@ const Profile = () => {
             <div className={`${showModalInfo === 'account' ? ' border-green-500 w-full border-b-4 my-0 flex rounded-sm justify-center place-items-center flex-col py-2 px-4' : 'text-center border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'}`} onClick={() => setShowModal('account')}>
               <h1 className='text-[14px]'>Account</h1>
             </div>
-            <div className={`${showModalInfo === 'tickets/books' ? ' border-green-500 w-full border-b-4 my-0 flex justify-center place-items-center flex-col py-2 px-4' : 'text-center border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'}`} onClick={() => setShowModal('tickets/books')}>
+            <div className={`${showModalInfo === 'tickets/books' ? ' border-green-500 w-full border-b-4 my-0 flex rounded-sm justify-center place-items-center flex-col py-2 px-4' : 'text-center border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'}`} onClick={() => setShowModal('tickets/books')}>
               <h1 className='text-[14px]'>Tickets/Bookings</h1>
             </div>
             <div className={`border-l-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200`}>
