@@ -1,7 +1,11 @@
-import React from "react";
-const Login = () => {
-    return (
-        <div className="text-black">Login</div>
-    );
+import React from 'react'
+
+const page = () => {
+  return (
+    <div>
+      sdasfdg
+    </div>
+  )
 }
-export default Login
+
+export default page

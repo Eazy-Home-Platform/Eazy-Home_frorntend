@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 import Form from "../components/Form";
 
@@ -32,12 +32,5 @@ const Signup = () => {
 };
 
 export default Signup;
-=======
-import React from "react"
-const Signup = () => {
-    return (
-        <div className="text-black">Sign up</div>
-    )
-}
-export default Signup 
->>>>>>> 27cf6fdadd67a75845be326cb64c020e06400776
+
+
