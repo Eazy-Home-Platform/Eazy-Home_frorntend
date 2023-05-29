@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "account-features",
+    "auth-features",
+    "elua",
+    "listings-page",
+    "main",
+    "origin",
+    "properties-page",
+    "responsive-pages"
+  ],
+  "parent": {
+    "account-features": "main",
+    "auth-features": "main",
+    "elua": "main",
+    "listings-page": "main",
+    "main": null,
+    "origin": "main",
+    "properties-page": "main",
+    "responsive-pages": "main"
+  },
+  "order": [
+    "main",
+    "account-features",
+    "auth-features",
+    "elua",
+    "listings-page",
+    "origin",
+    "properties-page",
+    "responsive-pages"
+  ]
+}
