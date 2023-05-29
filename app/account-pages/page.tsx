@@ -5,10 +5,11 @@ import pic from '../(assets)/model.jpeg'
 import Image from 'next/image'
 import { FaCloudUploadAlt, FaPencilAlt } from 'react-icons/fa'
 import AccountInfo from './(features)/account-info'
+import TicketBookings from './(features)/bookings'
 const Profile = () => {
-  const [showModalInfo, setShowModal] = useState<boolean>(false)
+  const [showModalInfo, setShowModal] = useState<string>('account')
   return (
-    <div className='bg-white text-black min-h-screen'>
+    <div className='bg-[#FAFBFC] text-black min-h-screen pb-14'>
       <Header />
       <main className='lg:px-20'>
         <div className='bg-white border-slate-100 border-2 relative my-6 flex justify-center flex-col place-items-center py-6 rounded-sm w-full '>
@@ -32,20 +33,22 @@ const Profile = () => {
             </button>
           </div>
         </div>
-        <div className='bg-white shadow-md rounded-md w-full '>
-          <div className='bg-white shadow-md shadow-slate-100 w-full y-4 flex justify-between'>
-            <div className={`border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200`} onClick={() => setShowModal(true)}>
+        <div className='w-full'>
+          <div className='bg-white shadow-md rounded-md shadow-slate-100 w-full y-4 flex justify-between'>
+            <div className={`${showModalInfo === 'account' ? ' border-green-500 w-full border-b-4 my-0 flex rounded-sm justify-center place-items-center flex-col py-2 px-4' : 'text-center border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'}`} onClick={() => setShowModal('account')}>
               <h1 className='text-[14px]'>Account</h1>
             </div>
-            <div className={`border-b-4 my-0 flex justify-center place-items-center flex-col py-2 w-full px-4 border-green-400`}>
+            <div className={`${showModalInfo === 'tickets/books' ? ' border-green-500 w-full border-b-4 my-0 flex rounded-sm justify-center place-items-center flex-col py-2 px-4' : 'text-center border-r-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200'}`} onClick={() => setShowModal('tickets/books')}>
               <h1 className='text-[14px]'>Tickets/Bookings</h1>
             </div>
             <div className={`border-l-2 my-4 py-2 min-w-[30vw] px-4 border-slate-200`}>
               <h1 className='text-[14px]'>Payment methods</h1>
             </div>
           </div>
-          {showModalInfo &&
+          {showModalInfo === 'account' &&
             <AccountInfo />
+          }{showModalInfo === 'tickets/books' &&
+            <TicketBookings />
           }
         </div>
       </main>
