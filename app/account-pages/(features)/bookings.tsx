@@ -3,8 +3,8 @@ import { FaArrowAltCircleDown, FaArrowDown, FaBed, FaPlane } from 'react-icons/f
 
 const TicketBookings = () => {
     return (
-        <div className='bg-white text-black w-full'>
-            <div className='flex justify-between place-items-center my-4 px-10'>
+        <div className='text-black w-full'>
+            <div className='flex justify-between py-8 place-items-center px-10'>
                 <h1 className='text-xl font-medium'>Bookings</h1>
                 <span className='text-slate-500 text-[12px] flex gap-6 place-items-center'>Upcoming
                     <FaArrowDown className='text-[12px]' />
