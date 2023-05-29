@@ -1,5 +1,5 @@
-import { randomUUID } from "crypto";
-import { stringifyUrl } from "query-string/base";
+import { v4 as uuidv4 } from 'uuid';
+
 
 interface ILinks {
     name: string;
@@ -64,7 +64,7 @@ export interface ITicket {
 
 export const TicketsArr: ITicket[] = [
 {
-    id: '#12',
+    id: uuidv4(),
     flight_company: '',
     departure: 'New-york',
     arrival: 'China-downtown',
@@ -77,7 +77,7 @@ export const TicketsArr: ITicket[] = [
     status: TicketStatus.ACTIVE
 },
 {
-    id: '#12',
+    id: uuidv4(),
     departure: 'Seattle',
     flight_company: '',
     arrival: 'New-York',
@@ -90,7 +90,7 @@ export const TicketsArr: ITicket[] = [
     status: TicketStatus.ACTIVE
 },
 {
-    id: '#12',
+    id: uuidv4(),
     departure: 'MACAU',
     flight_company: '',
     arrival: 'BEIJING',
