@@ -2,11 +2,14 @@
 import React from "react";
 import Form from "../components/Form";
 import LoginForm from "../components/LoginForm";
+import Logo from "../components/Logo";
 
 const Signup = () => {
   return (
     <div className="w-full h-full relative flex flex-col px-5 py-5 bg-[#EAEAEA]  justify-center  ">
-      <h2 className="text-[#000000] font-bold">Logo</h2>
+      <h2 className="text-[#000000] font-bold">
+        <Logo/>
+      </h2>
       <div className="flex justify-center font- w-full  p-4">
       <div className="w-full text-black">
           <LoginForm />

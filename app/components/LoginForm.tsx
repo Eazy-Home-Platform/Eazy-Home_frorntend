@@ -72,12 +72,13 @@ const LoginForm = () => {
         </div>
         <button type="submit" className=" mt-2 p-3 px-40 w-full bg-[#8DD3BB] text-black rounded-[4px] "> Create account</button>
         <p className="text-center pt-2">
-          Don't have an account? <a className="text-red-400" href="">Signup</a>
+          Don't have an account? <a className="text-red-400" href="">Login </a>
         </p>
         <div className="w-full flex justify-between items-center pt-3">
           <div className="h-[1px] bg-[#948e8e] w-[30%]"></div>
           <p className="text-gray-400 ">Or Sign Up with</p>
-          <div className="h-[1px] bg-[#9d9595]  w-[30%]"></div>
+          <div
+           className="h-[1px] bg-[#9d9595]  w-[30%]"></div>
         </div>
         <div className="pt-6">
           <div className="flex justify-between items-center w-full">
