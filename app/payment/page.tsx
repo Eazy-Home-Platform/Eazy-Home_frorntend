@@ -79,7 +79,7 @@ const Payment = () => {
                     <div className="flex flex-row justify-between w-[80%]">
                         <TextField
                             sx={{
-                                // width: "80%"
+                             
                             }}
                             id="outlined-helperText"
                             label="Exp. date"
@@ -88,7 +88,6 @@ const Payment = () => {
                         />
                         <TextField
                             sx={{
-                                // width: "80%"
                             }}
                             id="outlined-helperText"
                             label="CVC"
