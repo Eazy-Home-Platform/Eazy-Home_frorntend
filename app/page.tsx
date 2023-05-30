@@ -10,7 +10,7 @@ import Landing  from './Landing/landing'
 
 export default function Home() {
   return (
-    <main className="flex min-h-[100vh] flex-col bg-white justify-between">
+    <main className="flex overflow-hidden flex-col bg-white justify-between">
       <Landing />
       <Category />
       <Listings />

@@ -8,7 +8,7 @@ const Landing = () => {
         <div className="p-2">
         <div className="bg-[url('/landing-image.jpeg')] w-full bg-fixed bg-cover rounded-md h-[98vh] box-border">
           <div className="container-gradient">
-            <div className="mx-auto flex flex-row items-center justify-around py-5">
+            <div className="mx-auto flex flex-row items-center  justify-around py-5">
               <Logo />
               <Navbar />
               <AuthButtons />
