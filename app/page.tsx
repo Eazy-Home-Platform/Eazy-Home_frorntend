@@ -1,4 +1,21 @@
+"use client";
 import Image from 'next/image'
+<<<<<<< HEAD
+import HomePage from './components/HomePage'
+import {BrowserRouter,Routes,Route } from 'react-router-dom'
+import SignupPage from './components/authPages/SignupPage';
+export default function Home() {
+  return (
+<div>
+  <BrowserRouter>
+  <Routes>
+    {/* <Route path='' element={<HomePage/>}/> */}
+    {/* <Route path='/' element={<SignupPage/>}/> */}
+    
+  </Routes>
+  </BrowserRouter>
+</div>
+=======
 import { Inter } from 'next/font/google'
 import Logo from './(components)/Logo'
 import Navbar from './(components)/Navbar'
@@ -16,6 +33,7 @@ export default function Home() {
       <Listings />
       <Footer />
     </main>
+>>>>>>> 27cf6fdadd67a75845be326cb64c020e06400776
     
   )
 }
