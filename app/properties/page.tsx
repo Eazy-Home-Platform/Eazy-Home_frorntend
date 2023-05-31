@@ -1,15 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Header from "../(components)/header";
 import { FaUser } from "react-icons/fa";
 import PriceSlider from "../(components)/Slider";
 import { Checkbox } from "@mui/material";
-import Image from "next/image";
-import { MdLocationOn } from "react-icons/md";
-import StarContainer from "../(components)/StarContainer";
-import { RiCupFill } from "react-icons/ri";
-import { AiFillHeart } from "react-icons/ai";
 import Footer from "../(components)/Footer";
+import Houses from "./houses/houses";
 
 const aminities = [
     {
@@ -81,8 +77,32 @@ const WishListOptions = [
     },
 ]
 
+const rates = [
+    {
+        id: "1",
+        rate: "0+",
+    },
+    {
+        id: "2",
+        rate: "1+",
+    },
+    {
+        id: "3",
+        rate: "2+",
+    },
+    {
+        id: "4",
+        rate: "3+",
+    },
+    {
+        id: "5",
+        rate: "4+",
+    }
+]
+
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 const Properties = () => {
+    const [showModalInfo, setShowModal] = useState<string>("home")
     return (
         <div className="bg-[#FAFBFC] text-black min-h-screen">
             <Header />
@@ -94,12 +114,10 @@ const Properties = () => {
                     <div className="text-base font-semibold">Price</div>
                     <PriceSlider />
                     <div className="text-base font-semibold mt-10">Rating</div>
-                    <div className="flex flex-row gap-3">
-                        <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">0+</div>
-                        <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">1+</div>
-                        <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">2+</div>
-                        <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">3+</div>
-                        <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">4+</div>
+                    <div className="flex flex-row inline-block gap-3">
+                        {rates.map((rate) => (
+                            <div id={rate.id} className="border-solid border p-3 rounded-md border-teal-400 text-xs">{rate.rate}</div>
+                        ))}
                     </div>
                     <div className="w-full border border-[#ACACAC] opacity-30"></div>
                     <div className="w-full border border-[#ACACAC] opacity-30"></div>
@@ -115,54 +133,36 @@ const Properties = () => {
                 </div>
                 <div className="justify-self-start h-[205vh] mr-4 border border-[#ACACAC] opacity-50"></div>
                 <div className="w-[70%] flex flex-col gap-3">
-                {WishListOptions.map((wishlist) => (
-                    <div key={wishlist.id} className="flex flex-row w-[98%]  mb-5 h-[45vh] bg-white rounded-md">
-                        <div className="w-[40%] relative overflow-hidden">
-                            <Image fill src={wishlist.imageSrc} alt="favourites" className="object-cover rounded-l-md w-full object-full" />
-                            <div className="absolute top-3 right-3">
-                                <div className="">
-                                    <p>{wishlist.images}</p>
-                                </div>
-                            </div>
+                    <div className="bg-white shadow-md rounded-md shadow-slate-100 w-[98%]  flex justify-center">
+                        <div className={`${showModalInfo === 'home' ? 'border-green-500 border-b-4 w-[25%] py-2 px-4' : 'py-2 w-[25%] px-4'}`} onClick={() => setShowModal("home")}>
+                            <h1 className='text-base font-semibold'>Houses</h1>
+                            <p className='text-xs text-thin'>250+ places</p>
                         </div>
-                        <div className="flex flex-col p-5 gap-3 relative w-full">
-                            <p className="text-xl font-bold w-[50%]">{wishlist.name}</p>
-                            <div className="flex flex-row">
-                                <MdLocationOn size={16} />
-                                <p className="text-xs font-thin">{wishlist.location}</p>
-                            </div>
-                            <div className="flex flex-row gap-4">
-                                <StarContainer />
-                                <p className="text-xs font-light">5 Stars Hotel</p>
-                                <div className="flex flex-row gap-2">
-                                    <RiCupFill />
-                                    <p className="text-xs font-light">
-                                        {wishlist.aminities}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex flex-row">
-                                <div className="border-solid border p-2 rounded-md border-teal-400 text-xs">4.2</div>
-                                <p className="text-xs font-semibold p-2">{wishlist.rate}</p>
-                                <p className="text-xs font-light p-2">{wishlist.reviews}</p>
-                            </div>
-                            <div className="flex w-[100%] border border-gray-300"></div>
-                            <div className="flex flex-row gap-10">
-                                <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">
-                                    <AiFillHeart size={20} />
-                                </div>
-                                <button className="bg-[#8DD3BB] w-[90%] font-semibold rounded-md">View Place</button>
-                            </div>
-                            <div className="absolute top-0 right-0">
-                                <div className="p-8">
-                                    <p className="text-xs text-neutral-500 font-normal">Starting from</p>
-                                    <p className="text-orange-500 font-semibold text-2xl">${wishlist.amount} / <span className="text-md">night</span></p>
-                                    <p className="text-xs text-neutral-500 font-normal">excl. tax</p>
-                                </div>
-                            </div>
+                        <div className={`${showModalInfo === 'villas' ? 'border-green-500 border-b-4 w-[25%] py-2 px-4' : 'py-2 w-[25%] px-4'}`} onClick={() => setShowModal("villas")}>
+                            <h1 className='text-base font-semibold'>Villas</h1>
+                            <p className='text-xs text-thin'>56+ places</p>
+                        </div>
+                        <div className={`${showModalInfo === 'resorts' ? 'border-green-500 border-b-4 w-[25%] py-2 px-4' : 'py-2 w-[25%] px-4'}`} onClick={() => setShowModal("resorts")}>
+                            <h1 className='text-base font-semibold'>Resorts</h1>
+                            <p className='text-xs text-thin'>86+ places</p>
+                        </div>
+                        <div className={`${showModalInfo === 'appartments' ? 'border-green-500 border-b-4 w-[25%] py-2 px-4' : 'py-2 w-[25%] px-4'}`} onClick={() => setShowModal("appartments")}>
+                            <h1 className='text-base font-semibold'>Appartments</h1>
+                            <p className='text-xs text-thin'>125+ places</p>
                         </div>
                     </div>
-                ))}
+                    {showModalInfo === "home" && 
+                     <Houses />
+                    }
+                    {showModalInfo === "villas" && 
+                     <Houses />
+                    }
+                    {showModalInfo === "resorts" && 
+                     <Houses />
+                    }
+                    {showModalInfo === "appartments" && 
+                     <Houses />
+                    }
                 <button className="bg-black text-white w-[95%] font-medium rounded-md p-3">Show more results</button>
                 </div>
             </div>
