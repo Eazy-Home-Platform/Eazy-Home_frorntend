@@ -65,7 +65,7 @@ const Payment = () => {
                             <MenuItem value={30}>Stripe</MenuItem>
                         </Select>
                     </FormControl>
-                    <div className="text-3xl font-bold">Add a payment method</div>
+                    <div className="text-xl sm:text-3xl font-bold">Add a payment method</div>
                     <div className="text-sm font-light text-[#5E5E5E]">Let's get you all setup so you can access your personal account.</div>
                     <TextField
                         sx={{
@@ -122,7 +122,7 @@ const Payment = () => {
                     </FormControl>
                     <div className="flex flex-row justify-start items-center">
                         <Checkbox {...label} />
-                        <div className="text-sm font-semibold">Securely save my information for 1-click checkout</div>
+                        <div className="text-xs sm:text-sm font-semibold w-[80%]">Securely save my information for 1-click checkout</div>
                     </div>
                     <button className="bg-[#8DD3BB] w-[80%] font-medium rounded-md p-3">Add payment method</button>
                     <div className="text-xs  text-center text-[#5E5E5E] w-[80%]">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</div>
