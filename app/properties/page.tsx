@@ -9,6 +9,7 @@ import { MdLocationOn } from "react-icons/md";
 import StarContainer from "../(components)/StarContainer";
 import { RiCupFill } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
+import Footer from "../(components)/Footer";
 
 const aminities = [
     {
@@ -165,6 +166,7 @@ const Properties = () => {
                 <button className="bg-black text-white w-[95%] font-medium rounded-md p-3">Show more results</button>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

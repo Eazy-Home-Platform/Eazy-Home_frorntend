@@ -3,7 +3,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import Link from "next/link";
 const Navbar = () => {
     return (
-        <div className="flex flex-row items-center justify-center gap-10 text-sm">
+        <div className="md:flex md:items-center md:justify-center hidden gap-10 text-sm">
             <div className="flex flex-row gap-2">
                 <AiFillHome size={20} color="white" />
                 <Link href="/" className="font-bold">Home </Link>
