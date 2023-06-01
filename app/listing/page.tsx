@@ -1,16 +1,19 @@
-import * as React from "react";
+"use client";
+import React, { useMemo } from "react";
 import Header from "../(components)/header";
 import { MdLocationOn } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import Image from "next/image";
 import Footer from "../(components)/Footer";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import MapListing from "../(components)/MapListing";
 
 const Listing = () => {
     return (
         <div className="bg-[#FAFBFC] text-black min-h-screen">
             <Header />
             <div className="flex flex-col p-10 gap-10">
-                <div className="flex flex-row w-full justify-between items-center">
+                <div className="flex flex-row w-full justify-between items-center p-10">
                     <div className="flex flex-col gap-3">
                         <h1 className="text-3xl font-bold">CVK Park Bosphorus Hotel Istanbul</h1>
                         <div className="flex flex-row">
@@ -97,7 +100,20 @@ const Listing = () => {
                         <button className="bg-[#8DD3BB] w-[20%] p-3 font-normal rounded-md">View on google maps</button>
                     </div>
                 </div>
+                <div className="flex flex-col gap-1">
+                    <MapListing />
+                    <div className="flex flex-row gap-1">
+                        <MdLocationOn size={16} />
+                        <p className="text-sm font-thin">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</p>
+                    </div>
+                </div>
+
+                <div className="border border-[#ACACAC] w-full opacity-40 mb-4 mx-auto"></div>
+                <div className="flex flex-col gap-2">
+                    <p className="text-xl font-bold">Amenities</p>
+                </div>
             </div>
+            
             <Footer />
         </div>
     )
