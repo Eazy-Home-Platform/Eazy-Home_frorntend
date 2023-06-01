@@ -1,4 +1,6 @@
+import { Interface } from 'readline';
 import { v4 as uuidv4 } from 'uuid';
+import Listing from '../listing/page';
 
 
 interface ILinks {
@@ -102,4 +104,19 @@ export const TicketsArr: ITicket[] = [
     seat_number: '788',
     status: TicketStatus.ACTIVE
 },
+]
+
+export interface IListing {
+    id?: string;
+    name: string;
+    location: string;
+    stars: string;
+    aminities: string;
+    rate: string;
+    reviews: string;
+    amount: string;
+}
+
+export const ListingArr: IListing[] = [
+
 ]

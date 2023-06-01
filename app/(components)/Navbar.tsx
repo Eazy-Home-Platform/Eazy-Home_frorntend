@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="md:flex md:items-center md:justify-center hidden gap-10 text-sm">
             <div className="flex flex-row gap-2">
                 <AiFillHome size={20} color="white" />
-                <Link href="/" className="font-bold">Home </Link>
+                <Link href="/" className="font-bold">Home</Link>
             </div>
             <div className="flex flex-row gap-2">
                 <AiFillInfoCircle size={20} color="white" />
