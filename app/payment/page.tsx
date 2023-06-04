@@ -17,7 +17,7 @@ const Payment = () => {
             <Header />
             <div className="w-full flex lg:flex-row  flex-col justify-between">
                 <div className="justify-self-start  ml-10 my-10">
-                    <Image src="/fav3.jpeg" width={350} height={700} alt="properties" className="rounded-lg md:w-[80%]"  />
+                    <Image src="/fav3.jpeg" width={350} height={700} alt="properties" className="rounded-lg"  />
                 </div>
                 <div className="justify-self-start p-10 lg:w-[60%] w-full gap-5 flex flex-col">
                     <div className="md:text-lg text-xl font-bold">Your book details</div>
