@@ -64,32 +64,34 @@ const WishList = () => {
                             </div>
                         </div>
                         <div className="flex flex-col p-5 gap-3 relative w-full">
-                            <p className="text-xl font-bold">{wishlist.name}</p>
-                            <div className="flex flex-row">
-                                <MdLocationOn size={16} />
-                                <p className="text-xs font-thin">{wishlist.location}</p>
-                            </div>
-                            <div className="flex flex-row gap-4">
-                                <StarContainer />
-                                <p className="text-xs font-light">5 Stars Hotel</p>
-                                <div className="flex flex-row gap-2">
-                                    <RiCupFill />
-                                    <p className="text-xs font-light">
-                                        {wishlist.aminities}
-                                    </p>
+                            <div className="flex flex-col gap-3">
+                                <p className="text-xl font-bold">{wishlist.name}</p>
+                                <div className="flex flex-row">
+                                    <MdLocationOn size={16} />
+                                    <p className="text-xs font-thin">{wishlist.location}</p>
                                 </div>
-                            </div>
-                            <div className="flex flex-row">
-                                <div className="border-solid border p-2 rounded-md border-teal-400 text-xs">4.2</div>
-                                <p className="text-xs font-semibold p-2">{wishlist.rate}</p>
-                                <p className="text-xs font-light p-2">{wishlist.reviews}</p>
-                            </div>
-                            <div className="flex w-[100%] border border-gray-300"></div>
-                            <div className="flex flex-row gap-10">
-                                <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">
-                                    <AiFillHeart size={20} />
+                                <div className="flex flex-row gap-4">
+                                    <StarContainer />
+                                    <p className="text-xs font-light">5 Stars Hotel</p>
+                                    <div className="flex flex-row gap-2">
+                                        <RiCupFill />
+                                        <p className="text-xs font-light">
+                                            {wishlist.aminities}
+                                        </p>
+                                    </div>
                                 </div>
-                                <button className="bg-[#8DD3BB] w-[90%] font-semibold rounded-md">View Place</button>
+                                <div className="flex flex-row">
+                                    <div className="border-solid border p-2 rounded-md border-teal-400 text-xs">4.2</div>
+                                    <p className="text-xs font-semibold p-2">{wishlist.rate}</p>
+                                    <p className="text-xs font-light p-2">{wishlist.reviews}</p>
+                                </div>
+                                <div className="flex w-[100%] border border-gray-300"></div>
+                                <div className="flex flex-row gap-10">
+                                    <div className="border-solid border p-3 rounded-md border-teal-400 text-xs">
+                                        <AiFillHeart size={20} />
+                                    </div>
+                                    <button className="bg-[#8DD3BB] w-[90%] font-semibold rounded-md">View Place</button>
+                                </div>
                             </div>
                             <div className="absolute top-0 right-0">
                                 <div className="p-8">
