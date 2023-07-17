@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaArrowAltCircleDown, FaArrowDown, FaBed, FaPlane } from 'react-icons/fa'
+import { FaArrowDown, FaBed, FaPlane } from 'react-icons/fa'
+import TicketsDataInfo from './tickets-info'
 
 const TicketBookings = () => {
     return (
@@ -17,6 +18,9 @@ const TicketBookings = () => {
                 <div className='border-l-2 my-4 py-2 min-w-[40vw] px-4 border-slate-200'>
                     <h1 className='text-[14px] flex place-items-center gap-4'><FaBed /> Stays</h1>
                 </div>
+            </div>
+            <div>
+                <TicketsDataInfo />
             </div>
         </div>
     )

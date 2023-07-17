@@ -47,6 +47,13 @@ enum TicketStatus {
     PENDING,
     INACTIVE
 }
+export interface IPaymentCard {
+    card_id: string;
+    card_cvc: string;
+    createdAt: string;
+    valid_date: Date;
+    card_url: string;
+}
 
 export interface ITicket {
     id?: string;
@@ -63,43 +70,67 @@ export interface ITicket {
 }
 
 export const TicketsArr: ITicket[] = [
-{
-    id: uuidv4(),
-    flight_company: '',
-    departure: 'New-york',
-    arrival: 'China-downtown',
-    departure_time: '03:20 AM',
-    arrival_time: '19:20 PM',
-    issued_date: new Date(),
-    timezone: 'CAT',
-    gate_station: 'A34S',
-    seat_number: '128',
-    status: TicketStatus.ACTIVE
-},
-{
-    id: uuidv4(),
-    departure: 'Seattle',
-    flight_company: '',
-    arrival: 'New-York',
-    departure_time: '13:20 AM',
-    arrival_time: '16:20 PM',
-    issued_date: new Date(),
-    timezone: 'EST',
-    gate_station: 'A38S',
-    seat_number: '198',
-    status: TicketStatus.ACTIVE
-},
-{
-    id: uuidv4(),
-    departure: 'MACAU',
-    flight_company: '',
-    arrival: 'BEIJING',
-    departure_time: '18:20 AM',
-    arrival_time: '20:20 PM',
-    issued_date: new Date(),
-    timezone: 'GMT+6',
-    gate_station: 'B14S',
-    seat_number: '788',
-    status: TicketStatus.ACTIVE
-},
+    {
+        id: uuidv4(),
+        flight_company: '/(assets)/flight_company.png',
+        departure: 'New-york',
+        arrival: 'China-downtown',
+        departure_time: '03:20 AM',
+        arrival_time: '19:20 PM',
+        issued_date: new Date(),
+        timezone: 'CAT',
+        gate_station: 'A34S',
+        seat_number: '128',
+        status: TicketStatus.ACTIVE
+    },
+    {
+        id: uuidv4(),
+        departure: 'Seattle',
+        flight_company: '/(assets)/flight_company.png',
+        arrival: 'New-York',
+        departure_time: '13:20 AM',
+        arrival_time: '16:20 PM',
+        issued_date: new Date(),
+        timezone: 'EST',
+        gate_station: 'A38S',
+        seat_number: '198',
+        status: TicketStatus.ACTIVE
+    },
+    {
+        id: uuidv4(),
+        departure: 'MACAU',
+        flight_company: '/(assets)/flight_company.png',
+        arrival: 'BEIJING',
+        departure_time: '18:20 AM',
+        arrival_time: '20:20 PM',
+        issued_date: new Date(),
+        timezone: 'GMT+6',
+        gate_station: 'B14S',
+        seat_number: '788',
+        status: TicketStatus.ACTIVE
+    },
 ]
+export const paymentCards: IPaymentCard[] = [
+    {
+      card_id: "card_123",
+      card_cvc: "123",
+      createdAt: "2023-05-15T12:30:00Z",
+      valid_date: new Date("2024-06-30"),
+      card_url: "https://example.com/card_123"
+    },
+    {
+      card_id: "card_456",
+      card_cvc: "456",
+      createdAt: "2023-05-20T09:45:00Z",
+      valid_date: new Date("2025-02-28"),
+      card_url: "https://example.com/card_456"
+    },
+    {
+      card_id: "card_789",
+      card_cvc: "789",
+      createdAt: "2023-05-25T16:15:00Z",
+      valid_date: new Date("2023-12-31"),
+      card_url: "https://example.com/card_789"
+    }
+  ];
+  
