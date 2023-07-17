@@ -1,4 +1,6 @@
+import { Interface } from 'readline';
 import { v4 as uuidv4 } from 'uuid';
+import Listing from '../listing/page';
 
 
 interface ILinks {
@@ -70,45 +72,60 @@ export interface ITicket {
 }
 
 export const TicketsArr: ITicket[] = [
-    {
-        id: uuidv4(),
-        flight_company: '/(assets)/flight_company.png',
-        departure: 'New-york',
-        arrival: 'China-downtown',
-        departure_time: '03:20 AM',
-        arrival_time: '19:20 PM',
-        issued_date: new Date(),
-        timezone: 'CAT',
-        gate_station: 'A34S',
-        seat_number: '128',
-        status: TicketStatus.ACTIVE
-    },
-    {
-        id: uuidv4(),
-        departure: 'Seattle',
-        flight_company: '/(assets)/flight_company.png',
-        arrival: 'New-York',
-        departure_time: '13:20 AM',
-        arrival_time: '16:20 PM',
-        issued_date: new Date(),
-        timezone: 'EST',
-        gate_station: 'A38S',
-        seat_number: '198',
-        status: TicketStatus.ACTIVE
-    },
-    {
-        id: uuidv4(),
-        departure: 'MACAU',
-        flight_company: '/(assets)/flight_company.png',
-        arrival: 'BEIJING',
-        departure_time: '18:20 AM',
-        arrival_time: '20:20 PM',
-        issued_date: new Date(),
-        timezone: 'GMT+6',
-        gate_station: 'B14S',
-        seat_number: '788',
-        status: TicketStatus.ACTIVE
-    },
+{
+    id: uuidv4(),
+    flight_company: '',
+    departure: 'New-york',
+    arrival: 'China-downtown',
+    departure_time: '03:20 AM',
+    arrival_time: '19:20 PM',
+    issued_date: new Date(),
+    timezone: 'CAT',
+    gate_station: 'A34S',
+    seat_number: '128',
+    status: TicketStatus.ACTIVE
+},
+{
+    id: uuidv4(),
+    departure: 'Seattle',
+    flight_company: '',
+    arrival: 'New-York',
+    departure_time: '13:20 AM',
+    arrival_time: '16:20 PM',
+    issued_date: new Date(),
+    timezone: 'EST',
+    gate_station: 'A38S',
+    seat_number: '198',
+    status: TicketStatus.ACTIVE
+},
+{
+    id: uuidv4(),
+    departure: 'MACAU',
+    flight_company: '',
+    arrival: 'BEIJING',
+    departure_time: '18:20 AM',
+    arrival_time: '20:20 PM',
+    issued_date: new Date(),
+    timezone: 'GMT+6',
+    gate_station: 'B14S',
+    seat_number: '788',
+    status: TicketStatus.ACTIVE
+},
+]
+
+export interface IListing {
+    id?: string;
+    name: string;
+    location: string;
+    stars: string;
+    aminities: string;
+    rate: string;
+    reviews: string;
+    amount: string;
+}
+
+export const ListingArr: IListing[] = [
+
 ]
 export const paymentCards: IPaymentCard[] = [
     {
