@@ -1,20 +1,20 @@
 
 import React from "react";
-import Form from "../components/Form";
-import Logo from "../components/Logo";
+import Form from "../(components)/Form";
+import Logo from "../(components)/Logo";
 
 const Signup = () => {
   return (
-    <div className="w-full  relative flex flex-col px-4 bg-[#EAEAEA]  justify-center  ">
+    <div className="py-5 relative flex flex-col px-8 bg-white min-h-screen justify-center  ">
       <h2 className="text-[#000000] font-bold">
         <Logo/>
       </h2>
-      <div className="flex justify-center font- w-full ">
-        <div className=" relative flex justify-center items-center  w-full ">
-          <div className="absolute w-full  h-[90vh]">
-            <img src="./landing-image.jpeg" alt="" className="h-full w-full" />
+      <div className="flex justify-center gap-10 w-full ">
+        <div className="relative flex justify-center items-center  w-full ">
+          <div className="absolute w-full rounded-lg h-[86vh]">
+            <img src="./landing-image.jpeg" alt="" className="h-full rounded-lg w-full" />
           </div>
-          <div className="w-full absolute h-[90vh] bg-black/50"></div>
+          <div className="w-full absolute rounded-lg h-[86vh] bg-black/50"></div>
           <div className="flex absolute flex-col justify-center items-center  w-full">
             <h2 className="w-[213px] text-[40px] h-[44px] font-bold text-[#ffffff]">
               Welcome
@@ -28,7 +28,6 @@ const Signup = () => {
         <div className="w-full text-black">
           <Form />
         </div>
-        <div></div>
       </div>
     </div>
   );
