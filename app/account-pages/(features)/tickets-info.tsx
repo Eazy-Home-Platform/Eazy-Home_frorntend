@@ -1,3 +1,4 @@
+import { ITicket, TicketsArr } from '@/app/(utils)/custom.data'
 import Image from 'next/image'
 import React from 'react'
 const TicketsDataInfo = () => {
@@ -6,7 +7,7 @@ const TicketsDataInfo = () => {
             {TicketsArr.map((ticket: ITicket) => (
                 <div key={ticket.id} className='bg-white flex justify-between flex-row rounded-md shadow-md w-full py-4 px-4'>
                     <div className='h-12 w-12 rounded-xl'>
-                        <Image className='h-full w-full object-cover rounded-xl' src={`/(assets)/flight_company.png`} alt='' width={500} height={500} />
+                        <Image className='h-full w-full object-cover rounded-xl' src={`/(assets)/flight_company.jpg`} alt='' width={500} height={500} />
                     </div>
                     <div className='flex flex-row gap-4 place-items-center border-slate-400 border-r-2'>
                         <div>
@@ -21,8 +22,10 @@ const TicketsDataInfo = () => {
                             <span className='font-semibold text-[14px]'>{ticket.arrival_time}</span>
                         </div>
                     </div>
-                    <div>
-                        <button className='bg-btn_color py-4 text-white font-medium text-[12px] px-10 rounded-md'>Download ticket</button>
+                    <div className='bg-indigo-500 grid grid-cols-1 max-w-[20vw]'>
+                        <div>
+                            `
+                        </div>
                     </div>
                 </div>
             ))}
