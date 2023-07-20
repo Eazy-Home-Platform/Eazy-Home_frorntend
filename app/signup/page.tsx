@@ -4,10 +4,10 @@ import Logo from "../(components)/Logo";
 
 const Signup = () => {
   return (
-    <div className="py-5 relative flex flex-col px-8 bg-white min-h-screen justify-center  ">
-      <h2 className="text-[#000000] font-bold">
+    <div className="relative flex flex-col px-8 bg-white min-h-screen justify-center  ">
+      <div className="text-[#000000] absolute top-2 z-10 bg-white font-bold">
         <Logo/>
-      </h2>
+      </div>
       <div className="flex justify-center gap-10 w-full ">
         <div className="relative flex justify-center items-center  w-full ">
           <div className="absolute w-full rounded-lg h-[86vh]">
