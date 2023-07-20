@@ -1,4 +1,3 @@
-import { ITicket, TicketsArr } from '@/app/(utils)/custom.data'
 import Image from 'next/image'
 import React from 'react'
 const TicketsDataInfo = () => {
@@ -22,10 +21,8 @@ const TicketsDataInfo = () => {
                             <span className='font-semibold text-[14px]'>{ticket.arrival_time}</span>
                         </div>
                     </div>
-                    <div className='bg-indigo-500 grid grid-cols-1 max-w-[20vw]'>
-                        <div>
-                            `
-                        </div>
+                    <div>
+                        <button className='bg-btn_color py-4 text-white font-medium text-[12px] px-10 rounded-md'>Download ticket</button>
                     </div>
                 </div>
             ))}

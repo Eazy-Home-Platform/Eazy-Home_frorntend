@@ -1,4 +1,6 @@
+import { Interface } from 'readline';
 import { v4 as uuidv4 } from 'uuid';
+import Listing from '../listing/page';
 
 
 interface ILinks {
@@ -46,6 +48,13 @@ enum TicketStatus {
     ACTIVE,
     PENDING,
     INACTIVE
+}
+export interface IPaymentCard {
+    card_id: string;
+    card_cvc: string;
+    createdAt: string;
+    valid_date: Date;
+    card_url: string;
 }
 
 export interface ITicket {
@@ -103,3 +112,42 @@ export const TicketsArr: ITicket[] = [
     status: TicketStatus.ACTIVE
 },
 ]
+
+export interface IListing {
+    id?: string;
+    name: string;
+    location: string;
+    stars: string;
+    aminities: string;
+    rate: string;
+    reviews: string;
+    amount: string;
+}
+
+export const ListingArr: IListing[] = [
+
+]
+export const paymentCards: IPaymentCard[] = [
+    {
+      card_id: "card_123",
+      card_cvc: "123",
+      createdAt: "2023-05-15T12:30:00Z",
+      valid_date: new Date("2024-06-30"),
+      card_url: "https://example.com/card_123"
+    },
+    {
+      card_id: "card_456",
+      card_cvc: "456",
+      createdAt: "2023-05-20T09:45:00Z",
+      valid_date: new Date("2025-02-28"),
+      card_url: "https://example.com/card_456"
+    },
+    {
+      card_id: "card_789",
+      card_cvc: "789",
+      createdAt: "2023-05-25T16:15:00Z",
+      valid_date: new Date("2023-12-31"),
+      card_url: "https://example.com/card_789"
+    }
+  ];
+  

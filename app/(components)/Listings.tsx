@@ -77,58 +77,56 @@ const listingOptions = [
 const Listings = () => {
     return (
         <>
-
             <div className="text-black pt-24 px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-20">
-        {listingOptions.map((listing) => (                  
-            <div key={listing.id} className="col-span-1 cursor-pointer group">
-                <div className="flex flex-col gap-2 w-full">
-                    <div className="aspect-square w-full relative overflow-hidden rounded-xl">
-                        <Image
-                            fill
-                            className="
+                {listingOptions.map((listing) => (
+                    <div key={listing.id} className="col-span-1 cursor-pointer group">
+                        <div className="flex flex-col gap-2 w-full">
+                            <div className="aspect-square w-full relative overflow-hidden rounded-xl">
+                                <Image
+                                    fill
+                                    className="
                             object-cover 
                             h-full 
                             w-full
                             group-hover:scale-110 
                             transition
                             "
-                            src={listing.imageSrc}
-                            alt="Listing"
-                        />
-                        <div className="absolute top-3 right-3">
-                            <div className="relative hover:opacity-80 transition cursor-pointer">
-                                <AiOutlineHeart
-                                    size={28}
-                                    className="
+                                    src={listing.imageSrc}
+                                    alt="Listing"
+                                />
+                                <div className="absolute top-3 right-3">
+                                    <div className="relative hover:opacity-80 transition cursor-pointer">
+                                        <AiOutlineHeart
+                                            size={28}
+                                            className="
                                     fill-white
                                     absolute
                                     -top-[2px]
                                     -right-[2px]
                                     "
-                                />
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="font-semibold text-lg">
+                                {listing.region}
+                            </div>
+                            <div className="font-light text-neutral-900">
+                                {listing.view}
+                            </div>
+                            <div className="font-light text-neutral-900">
+                                {listing.nights} - {listing.date}
+                            </div>
+                            <div className="flex flex-row items-center gap-1">
+                                <div className="font-semibold text-xl">
+                                    ${listing.price}
+                                </div>
+                                <div className="font-semibold">/ night</div>
                             </div>
                         </div>
                     </div>
-                    <div className="font-semibold text-lg">
-                        {listing.region}
-                    </div>
-                    <div className="font-light text-neutral-900">
-                        {listing.view}
-                    </div>
-                    <div className="font-light text-neutral-900">
-                        {listing.nights} - {listing.date}
-                    </div>
-                    <div className="flex flex-row items-center gap-1">
-                        <div className="font-semibold text-xl">
-                            ${listing.price}
-                        </div>
-                        <div className="font-semibold">/ night</div>
-                    </div>
-                </div>
+                ))}
             </div>
-        ))}
-        </div>
-        
         </>
     )
 }
