@@ -1,5 +1,5 @@
 "use client";
-[fix]: image referencing resolutionimport React from "react";
+import React from "react";
 import Header from "../(components)/header"
 import Image from "next/image";
 import {TextField} from "@mui/material";
