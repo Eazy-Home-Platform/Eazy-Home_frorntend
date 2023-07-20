@@ -1,25 +1,21 @@
 
 import React from "react";
-import Form from "../components/Form";
-import LoginForm from "../components/LoginForm";
-import Logo from "../components/Logo";
+import LoginForm from "../(components)/LoginForm";
+import Logo from "../(components)/Logo";
 
-const Signup = () => {
+const Login = () => {
   return (
-    <div className="w-full h-full relative flex flex-col px-5 py-5 bg-[#EAEAEA]  justify-center  ">
+    <div className="py-5 relative flex flex-col px-8 bg-white min-h-screen justify-center  ">
       <h2 className="text-[#000000] font-bold">
         <Logo/>
       </h2>
-      <div className="flex justify-center font- w-full  p-4">
-      <div className="w-full text-black">
-          <LoginForm />
-        </div>
-        <div className=" relative flex justify-center items-center  w-full ">
-          <div className="absolute w-full h-[100vh]">
-            <img src="./landing-image.jpeg" alt="" className="h-full w-full" />
+      <div className="flex justify-center gap-10 w-full ">
+        <div className="relative flex justify-center items-center  w-full ">
+          <div className="absolute w-full rounded-lg h-[86vh]">
+            <img src="./landing-image.jpeg" alt="" className="h-full rounded-lg w-full" />
           </div>
-          <div className="w-full  h-[100vh] absolute bg-black/50"></div>
-          <div className="flex absolute flex-col justify-center items-center h-full  w-full">
+          <div className="w-full absolute rounded-lg h-[86vh] bg-black/50"></div>
+          <div className="flex absolute flex-col justify-center items-center  w-full">
             <h2 className="w-[213px] text-[40px] h-[44px] font-bold text-[#ffffff]">
               Welcome
             </h2>
@@ -29,13 +25,12 @@ const Signup = () => {
             </div>
           </div>
         </div>
-        
-        
+        <div className="w-full text-black">
+          <LoginForm />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Signup;
-
-
+export default Login;
