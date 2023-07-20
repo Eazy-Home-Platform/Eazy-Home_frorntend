@@ -1,8 +1,7 @@
 "use client";
-import React, { useMemo, useState, useRef } from "react";
+import React, { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import { MapContainer, TileLayer } from "react-leaflet";
-import osm from "./osm.providers";
+
 export default function MapComponent() {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyD9BO8dmbho4t_Ct3ALeOy0C41u8x3KChk"
@@ -23,25 +22,3 @@ const MapListing = () => {
         </GoogleMap>
     )
 }
-
-// const MapListing = () => {
-//     const [center, setCenter ] = useState({ lat: 13.08, lng: 80.248 });
-//     const ZOOM_LEVEL = 2;
-//     const mapRef = useRef();
-//     return (
-//         <div>
-//             <MapContainer center={center} zoom={ZOOM_LEVEL} ref={mapRef} style={{
-//                 width: "100%",
-//                 height: "400px",
-                
-//             }}>
-//                 <TileLayer 
-//                     attribution={osm.maptiler.attribution}
-//                     url={osm.maptiler.url} 
-//                 />
-//             </MapContainer>
-//         </div>
-//     )
-// }
-
-// export default MapListing
