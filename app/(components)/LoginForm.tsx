@@ -23,7 +23,7 @@ const LoginForm = () => {
         <div className="w-full flex flex-col    p-4">
             <h2 className="font-normal text-[20px]  pl-5">Login</h2>
             <p className="font-normal text-[16px] pl-5 text-[#112211] pt-2">
-                Let’s get you all st up so you can access your personal account.{" "} </p>
+                Let&apos;s get you all st up so you can access your personal account.{" "} </p>
             <form action="" className="p-4 ">
                 <div className="flex pt-5 justify-center items-center w-full gap-3"></div>
                 <div className="flex pt-5 justify-center items-center w-full gap-3">
