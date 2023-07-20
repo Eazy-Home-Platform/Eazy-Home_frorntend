@@ -106,7 +106,7 @@ const Properties = () => {
     return (
         <div className="bg-[#FAFBFC] text-black min-h-screen">
             <Header />
-            <div className="w-full flex flex flex-row p-10">
+            <div className="w-full flex flex-row p-10">
                 <div className="flex flex-col w-[30%] gap-5">
                     <FaUser className='h-8 w-8 text-[12px] rounded-full bg-[#189AB4]'/>
                     <div className="text-base font-semibold">Filters</div>
@@ -114,9 +114,9 @@ const Properties = () => {
                     <div className="text-base font-semibold">Price</div>
                     <PriceSlider />
                     <div className="text-base font-semibold mt-10">Rating</div>
-                    <div className="flex flex-row inline-block gap-3">
+                    <div className="flex flex-row gap-3">
                         {rates.map((rate) => (
-                            <div id={rate.id} className="border-solid border p-3 rounded-md border-teal-400 text-xs">{rate.rate}</div>
+                            <div key={rate.id} id={rate.id} className="border-solid border p-3 rounded-md border-teal-400 text-xs">{rate.rate}</div>
                         ))}
                     </div>
                     <div className="w-full border border-[#ACACAC] opacity-30"></div>
