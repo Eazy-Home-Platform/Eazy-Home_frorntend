@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import Header from '../(components)/header'
-import pic from '../(assets)/model.jpeg'
 import Image from 'next/image'
 import { FaCloudUploadAlt, FaPencilAlt } from 'react-icons/fa'
 import AccountInfo from './(features)/account-info'
@@ -14,7 +13,7 @@ const Profile = () => {
       <main className='lg:px-20'>
         <div className='bg-white border-slate-100 border-2 relative my-6 flex justify-center flex-col place-items-center py-6 rounded-sm w-full '>
           <div className='border-red-400 relative border-2 rounded-full h-24 w-24'>
-            <Image className='h-full w-full object-cover rounded-full' src={pic}
+            <Image className='h-full w-full object-cover rounded-full' src={'/(assets)/model.jpeg'}
               alt=''
               width={600}
               height={600} />
