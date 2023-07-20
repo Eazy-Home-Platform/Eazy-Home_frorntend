@@ -6,6 +6,7 @@ import {BsApple} from 'react-icons/bs'
 import {Icon} from 'react-icons-kit'
 import {eye} from "react-icons-kit/feather/eye"
 import {eyeOff} from "react-icons-kit/feather/eyeOff"
+import Link from "next/link";
 
 const LoginForm = () => {
     const [type, setType] = useState("password");
@@ -45,7 +46,7 @@ const LoginForm = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-5 flex w-full">
+                <div className="pt-2 pb-4 flex place-items-center w-full">
                     <input type="checkbox"/>
                     <p className="flex w-full pl-2">
                         <span className="text-[] flex  ">
@@ -53,12 +54,12 @@ const LoginForm = () => {
                         </span>
                     </p>
                 </div>
-                <button type="submit" className=" mt-2 p-3 px-40 w-full bg-[#8DD3BB] text-black rounded-[4px] ">
-                    Create account</button>
+                <button type="submit" className=" mt-2 p-4 px-40 w-full bg-[#8DD3BB] text-black rounded-[4px] ">
+                    Continue now</button>
                 <p className="text-center pt-2">
                     Don&apos;t have an account?
-                    <a className="text-red-400" href="">Login
-                    </a>
+                    <Link className="text-red-400 px-2" href={'/signup'}>Sign Up
+                    </Link>
                 </p>
                 <div className="w-full flex justify-between items-center pt-3">
                     <div className="h-[1px] bg-[#948e8e] w-[30%]"></div>
