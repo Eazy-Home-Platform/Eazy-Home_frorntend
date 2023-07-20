@@ -6,6 +6,7 @@ import {BsApple} from 'react-icons/bs'
 import {Icon} from 'react-icons-kit'
 import {eye} from "react-icons-kit/feather/eye"
 import {eyeOff} from "react-icons-kit/feather/eyeOff"
+import Link from "next/link";
 
 const Form = () => {
     const [type, setType] = useState("password");
@@ -26,12 +27,12 @@ const Form = () => {
                 Let’s get you all st up so you can access your personal account.
             </p>
             <form action="" className="p-4 ">
-                <div className="flex pt-5 justify-center items-center w-full gap-3">
-                    <div className="flex  flex-col justify-center w-full">
+                <div className="flex pt-5 justify-center items-center w-full gap-x-3">
+                    <div className="flex flex-col justify-center w-full">
                         <label className="text-[#79747E]">First Name</label>
                         <input type="text" className="border-[1px] p-2 border-solid border-[#79747E] rounded-sm bg-transparent" placeholder=""/>
                     </div>
-                    <div className="flex pt-5  flex-col justify-center w-full ">
+                    <div className="flex flex-col justify-center w-full ">
                         <label className="text-[#79747E]">Last Name</label>
                         <input type="text" className="border-[1px] p-2 border-solid border-[#79747E] rounded-sm bg-transparent" placeholder=""/>
                     </div>
@@ -71,7 +72,7 @@ const Form = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-5 flex w-full">
+                <div className="pt-2 pb-4 flex place-items-center w-full">
                     <input type="checkbox"/>
                     <p className="flex w-full pl-2">
                         <span className="text-[] flex  ">
@@ -84,11 +85,11 @@ const Form = () => {
                             {" "} </span>
                     </p>
                 </div>
-                <button type="submit" className=" mt-2 p-3 px-40 w-full bg-[#8DD3BB] text-black rounded-[4px] ">
+                <button type="submit" className="mt-2 p-4 px-40 w-full bg-[#8DD3BB] text-black rounded-[4px] ">
                     Create account</button>
                 <p className="text-center pt-2">
                     Already have an account ?
-                    <a className="text-red-400" href="/login">Login</a>
+                    <Link className="text-red-400 px-2" href="/login">Login</Link>
                 </p>
                 <div className="w-full flex justify-between items-center pt-3">
                     <div className="h-[1px] bg-[#948e8e] w-[30%]"></div>
